@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+<div class="container" align="center">
+  <p> <h1>Homepage! </h1></p>
+  {% if request.user.is_authenticated %}
+  You are logged in as <strong>{{username}}</strong>
+  {% else%}
+  You are not logged in. Click below to sign up or login.
+  <br>
+  <a href="/register">Sign up page </a>
+   <br>
+   <a href="/login">Log in page </a>
+  {%endif%}
+</div>   
+
+<div class="container">
+  <div class="row">
+          {% for obj in object_list %}
+      <div class="col" >
+              <p>
+                <div class="card" style="width: 18rem;">
+                  {%if obj.image %}
+                     <a href="products/{{obj.slug}}"> <img class="card-img-top" style="width: 18rem; height: 20rem" src="{{obj.image.url}}" alt="{{obj.title}} pic"> </a>
+                  {% endif %}
+                      <div class="card-body">
+                        <a href="products/{{obj.slug}}"> <h5 class="card-title">{{obj.title}}</h5> </a>
+                        <p class="card-text">{{obj.desc}}. <i> <strong> Price: {{ obj.price }} </strong></i></p>
+                        <a href="products/{{obj.slug}}" class="btn btn-primary">View details </a>
+                        <a href="{{ obj.get_absolute_url }}" class="btn btn-warning">Add to Cart </a>
+                      </div>
+                </div>
+              
+              </p>
+      </div>
+          {%endfor%}
+  </div>
+</div>
+
+{% endblock%}

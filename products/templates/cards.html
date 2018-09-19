@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  {%if instance.image %}
+     <a href="{{instance.slug}}"> <img class="card-img-top" style="width: 18rem; height: 20rem" src="{{instance.image.url}}" alt="{{instance.title}} pic"> </a>
+  {% endif %}
+      <div class="card-body">
+        <a href="{{instance.slug}}"> <h5 class="card-title">{{instance.title}}</h5> </a>
+        <p class="card-text">{{instance.desc}}. <i> <strong> Price: {{ instance.price }} </strong></i></p>
+        <a href="{{instance.slug}}" class="btn btn-primary">View details </a>
+        <a href="{{ instance.get_absolute_url }}" class="btn btn-warning">Add to Cart </a>
+      </div>
+</div>

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+    <div class="container">
+        <div class="row">
+                {% for obj in object_list %}
+            <div class="col" >
+                    <p>
+                    {% include 'cards.html' with instance=obj %}</p>
+                    {% if forloop.counter|divisibleby:3 %}
+                    </div></div><div class="row"><div class="col-12"><hr noshade></div>
+                    {% else %}
+                    </div>
+                    {% endif %}
+            {%endfor%}
+        </div>
+    </div>
+
+{% endblock%}
