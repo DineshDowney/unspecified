@@ -19,11 +19,11 @@
           {% for obj in object_list %}
       <div class="col" >
               <p>
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem; background-color:rgba(245, 245, 245, 0);">
                   {%if obj.image %}
                      <a href="products/{{obj.slug}}"> <img class="card-img-top" style="width: 18rem; height: 20rem" src="{{obj.image.url}}" alt="{{obj.title}} pic"> </a>
                   {% endif %}
-                      <div class="card-body">
+                      <div class="card-body" style="opacity: 1;">
                         <a href="products/{{obj.slug}}"> <h5 class="card-title">{{obj.title}}</h5> </a>
                         <p class="card-text">{{obj.desc}}. <i> <strong> Price: {{ obj.price }} </strong></i></p>
                         <a href="products/{{obj.slug}}" class="btn btn-primary">View details </a>

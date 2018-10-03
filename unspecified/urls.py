@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^cart/',views.cart),
     url(r'^about_us/',views.about_us),
     url(r'^products/',include('products.urls')),
+    url(r'^search/',include('search.urls')),
     url(r'^logout/$', LogoutView.as_view(template_name='index.html'), name="logout"),
     
 ]

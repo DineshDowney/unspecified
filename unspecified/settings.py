@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homio',
     'products',
+    'projects',
+    'search',
 ]
 
 MIDDLEWARE = [

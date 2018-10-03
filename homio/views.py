@@ -46,7 +46,10 @@ def register_page(request):
         username=RForm.cleaned_data.get("username")
         password=RForm.cleaned_data.get("password")
         email=RForm.cleaned_data.get("email")
-        new_user=User.objects.create_user(username,email,password)
-        print(new_user)
-        login_page(request)
+        auth_user=User.objects.create_user(username,email,password)
+        print(auth_user)
+        auth_user = authenticate(username=username, password=password)
+        if auth_user is not None:
+            login(request,auth_user)
+            return redirect("/")
     return render(request,"register.html",{'form_dic':RForm})
