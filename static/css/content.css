@@ -1,0 +1,58 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    padding: 5px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* item image */
+
+.image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* card body */
+
+.card-body {
+    margin-top: 3px;
+}
+
+#item-name a {
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.card-body p {
+    color: blue;
+}
+
+.card-buttons {
+    padding: 5px;
+}
+
+.card-buttons a {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+#view {
+    background-color: yellow;
+}
+
+#cart {
+    background-color: #000;
+}
