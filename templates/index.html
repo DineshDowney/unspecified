@@ -1,7 +1,5 @@
-{% extends "base.html" %}
-{%load static%}
-{% block content %}
-<div class="container" align="center">
+{% extends "base.html" %} {%load static%} {% block content %}
+<!-- <div class="container" align="center">
   <p> <h1>Homepage! </h1></p>
   {% if request.user.is_authenticated %}
   You are logged in as <strong>{{username}}</strong>
@@ -12,29 +10,34 @@
    <br>
    <a href="/login">Log in page </a>
   {%endif%}
-</div>   
+</div>    -->
 
-<div class="container">
-  <div class="row">
-          {% for obj in object_list %}
-      <div class="col" >
-              <p>
-                <div class="card" style="width: 18rem; background-color:rgba(245, 245, 245, 0);">
-                  {%if obj.image %}
-                     <a href="products/{{obj.slug}}"> <img class="card-img-top" style="width: 18rem; height: 20rem" src="{{obj.image.url}}" alt="{{obj.title}} pic"> </a>
-                  {% endif %}
-                      <div class="card-body" style="opacity: 1;">
-                        <a href="products/{{obj.slug}}"> <h5 class="card-title">{{obj.title}}</h5> </a>
-                        <p class="card-text">{{obj.desc}}. <i> <strong> Price: {{ obj.price }} </strong></i></p>
-                        <a href="products/{{obj.slug}}" class="btn btn-primary">View details </a>
-                        <a href="{{ obj.get_absolute_url }}" class="btn btn-warning">Add to Cart </a>
-                      </div>
+<section class="section">
+    <div class="content">
+        {% for obj in object_list %}
+        <div class="col">
+            <div class="card">
+                <div class="image">
+                    {%if obj.image %}
+                    <a href="products/{{obj.slug}}"> <img class="card-img-top" style="width: 18rem; height: 20rem" src="{{obj.image.url}}" alt="{{obj.title}} pic"> </a>
+                    {% endif %}
                 </div>
-              
-              </p>
-      </div>
-          {%endfor%}
-  </div>
-</div>
+                <div class="card-body">
+                    <div id="item-name">
+                        <a href="products/{{obj.slug}}">
+                        {{obj.title}}
+                    </a>
+                    </div>
+                    <p>{{ obj.price }}</p>
+                    <div class="card-buttons">
+                        <a href="products/{{obj.slug}}" id="view">View details </a>
+                        <a href="{{ obj.get_absolute_url }}" id="cart">Add to Cart </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</section>
 
 {% endblock%}

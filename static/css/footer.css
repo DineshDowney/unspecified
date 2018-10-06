@@ -1,0 +1,17 @@
+.footer {
+    padding: 10px;
+    color: #000;
+}
+
+#credits {
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer i {
+    color: red;
+}
+
+.footer a {
+    color: #000;
+}

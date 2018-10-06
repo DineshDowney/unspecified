@@ -1,0 +1,39 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-gap: 1em; */
+    background: rgb(91, 190, 91);
+    width: 100%;
+    height: auto;
+}
+
+.navbar-brand {
+    padding: 5px;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: monospace;
+}
+
+
+/* input form */
+
+form {
+    padding: 5px;
+    margin: 0;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
