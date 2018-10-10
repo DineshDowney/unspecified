@@ -3,8 +3,8 @@
         <a href="/">Unspecified</a>
     </div>
     <div class="search">
-        <form>
-            <input type="text" class="form-control" placeholder="Search">
+        <form  method="GET" action="{% url 'query' %}">
+            <input type="text" class="form-control"  name="q" placeholder="Search">
         </form>
     </div>
 
