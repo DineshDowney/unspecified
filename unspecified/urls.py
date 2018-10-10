@@ -17,6 +17,8 @@ urlpatterns = [
     url(r'^products/',include('products.urls')),
     url(r'^search/',include('search.urls')),
     url(r'^logout/$', LogoutView.as_view(template_name='index.html'), name="logout"),
+    url(r'^api/pro/',include('products.api.urls')),
+    
     
 ]
 if settings.DEBUG:

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'products',
     'projects',
     'search',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +72,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'unspecified.wsgi.application'
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
