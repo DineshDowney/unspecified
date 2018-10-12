@@ -25,6 +25,8 @@ form label {
 /* Tweaks for Register and Login Forms */
 
 .form-head {
+    position: relative;
+    margin-top: 10px;
     padding: 10px;
     font-size: 40px;
     font-weight: 500;
@@ -47,10 +49,14 @@ form label {
 .form-container input[type="submit"] {
     color: #fff;
     font-size: 20px;
-    background: rgb(40, 97, 40);
+    background: #5BBE5B;
     padding: 10px 20px;
     border: 0;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     cursor: pointer;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-container input[type="submit"]:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
