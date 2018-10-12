@@ -2,16 +2,23 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;
-    padding: 5px;
+    padding: 10px;
 }
 
 .card {
     display: grid;
     grid-template-columns: 1fr;
+    background: #fff;
+    border-radius: 5px;
+    /* margin: 0 auto; */
 }
 
 
 /* item image */
+
+.image {
+    padding: 5px;
+}
 
 .image img {
     display: block;
@@ -24,35 +31,54 @@
 
 .card-body {
     margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+#item-name {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: baseline;
 }
 
 #item-name a {
     text-decoration: none;
     color: #000;
-    font-size: 17px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 600;
     text-transform: capitalize;
 }
 
 .card-body p {
-    color: blue;
+    font-size: 18px;
+    color: orange;
 }
 
 .card-buttons {
-    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
 }
 
 .card-buttons a {
     text-decoration: none;
-    padding: 5px;
-    font-size: 17px;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 20px;
+    text-align: center;
     text-transform: capitalize;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 5px;
+}
+
+.card-buttons a:hover {
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 #view {
-    background-color: yellow;
+    background-color: #070707;
 }
 
 #cart {
-    background-color: #000;
+    background-color: #ED9D2B;
 }
